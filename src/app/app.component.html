@@ -1,0 +1,18 @@
+
+     <div class="wrapper">
+       <table class="table table-striped">
+         <thead>
+         <tr>
+           <th>Color name <button class="btn btn-primary" (click)='sortColorsByName("asc")'>ASC</button><button class="btn btn-secondary" (click)='sortColorsByName("desc")'>DESC</button></th>
+           <th>Color value <button class="btn btn-primary" (click)='sortColorsByValue("asc")'>ASC</button><button class="btn btn-secondary" (click)='sortColorsByValue("desc")'>DESC</button></th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor='let color of colors'>
+           <td>{{color.colorName}}</td>
+           <td [ngStyle]="{'background-color': color.hexValue}"></td>
+         </tr>
+         </tbody>
+       </table>
+     </div>
+
